@@ -37,13 +37,14 @@ async function prompt(input, { apikey, model, count }) {
         ],
     }, { headers: { Authorization: `Bearer ${apikey}` } });
     const emoji = data.choices[0]?.message?.content.trim() ?? "";
-    return content + emoji;
+    popclip.pasteText(content + emoji, { restore: true });
+    return null;
 }
 exports.actions = [
     {
         title: "Autocomplete emoji with ChatGPT",
-        after: "paste-result",
         code: prompt,
         icon: "symbol:face.smiling",
+        requirements: ["text", "copy"],
     },
 ];

@@ -4,9 +4,14 @@ import type {
   CreateChatCompletionRequest,
   CreateChatCompletionResponse,
 } from "openai";
-import type { Input } from "popclip";
+import type { Action, Input, Options, PopClip } from "popclip";
 
-async function prompt(input: Input, { apikey, model, count }: Option) {
+declare const popclip: PopClip;
+
+async function prompt(
+  input: Input,
+  { apikey, model, count }: Option & Options
+) {
   const content = input.text.trim();
   const { data } = await axios.post<CreateChatCompletionResponse>(
     "https://api.openai.com/v1/chat/completions",
@@ -23,14 +28,15 @@ async function prompt(input: Input, { apikey, model, count }: Option) {
     { headers: { Authorization: `Bearer ${apikey}` } }
   );
   const emoji = data.choices[0]?.message?.content.trim() ?? "";
-  return content + emoji;
+  popclip.pasteText(content + emoji, { restore: true });
+  return null;
 }
 
 exports.actions = [
   {
     title: "Autocomplete emoji with ChatGPT",
-    after: "paste-result",
     code: prompt,
     icon: "symbol:face.smiling",
+    requirements: ["text", "copy"],
   },
-];
+] satisfies Array<Action>;
