@@ -1,0 +1,27 @@
+{
+  "name": "@suin/popclip-chatgpt-emoji-extension",
+  "private": true,
+  "version": "0.0.0-development",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "suin",
+  "scripts": {
+    "build": "tsc && awk '{print \"//\", $0}' manifest.yaml > popclip-chatgpt-emoji-extension.js && cat main.js >> popclip-chatgpt-emoji-extension.js"
+  },
+  "devDependencies": {
+    "@suin/tsconfig": "^0.0.0",
+    "@types/node": "^18.15.13",
+    "axios": "^1.3.6",
+    "openai": "^3.2.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  },
+  "packageManager": "yarn@3.2.4",
+  "engines": {
+    "node": ">=16.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
