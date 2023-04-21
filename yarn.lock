@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@suin/popclip-chatgpt-emoji@workspace:.":
+"@suin/popclip-chatgpt-emoji-extension@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@suin/popclip-chatgpt-emoji@workspace:."
+  resolution: "@suin/popclip-chatgpt-emoji-extension@workspace:."
   dependencies:
     "@suin/tsconfig": ^0.0.0
     "@types/node": ^18.15.13

@@ -14,5 +14,10 @@ options:
   - identifier: model
     label: Model
     type: string
-    description: 'Model to use for completion. Defaults to gpt-3.5-turbo'
+    description: Model to use for completion. Defaults to gpt-3.5-turbo
     default value: gpt-3.5-turbo
+  - identifier: count
+    label: Emoji Count
+    type: string
+    description: Number of emoji to autocomplete
+    default value: one
