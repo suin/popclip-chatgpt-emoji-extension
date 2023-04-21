@@ -10,13 +10,15 @@ Here are some examples of how the extension autocompletes text with emojis:
 - Input: `"I'm so excited"` -> Output: `"I'm so excited 😃"`
 - Input: `"Did someone say pizza party"` -> Output: `"Did someone say pizza party 🍕🎉"`.
 
+![demo](https://user-images.githubusercontent.com/855338/233659029-96c4e8b7-ff02-41bd-9ff6-aaeb56dd1d3b.gif)
+
 ## Prerequisites📚
 
 - This extension requires an OpenAI API key. If you don't have one yet, follow the instructions in the [Getting an OpenAI API Key](#getting-an-openai-api-key) section.
 
 ## Installation 💻
 
-1. Open the [popclip-chatgpt-emoji-extension.js](./popclip-chatgpt-emoji-extension.js) file.
+1. Open the [popclip-chatgpt-emoji-extension.js](https://raw.githubusercontent.com/suin/popclip-chatgpt-emoji-extension/main/popclip-chatgpt-emoji-extension.js) file.
 2. Click and drag the mouse cursor to manually select all the code.
 3. The PopClip installation window will appear. Click on "Install" to proceed.
 
